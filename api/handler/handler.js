@@ -9,7 +9,6 @@ function onSuccess(res, data, next) {
 }
 
 function onServerError(res, message, err, next) {
-  sendGELF(res.req, HTTPStatus.INTERNAL_SERVER_ERROR, err, 'error');
   return res.status(HTTPStatus.INTERNAL_SERVER_ERROR).json({
     success: false,
     message: [message],
@@ -17,8 +16,8 @@ function onServerError(res, message, err, next) {
 }
 
 function onError(res, err, message) {
-  if (err.detail) {
-     return onServerError(res, `${message} error: ${err}. detail: ${err.detail}.`, err);
+  if (err.data) {
+     return onServerError(res, `${message} error: ${err}. detail: ${err.data.message}.`, err);
   }
   return onServerError(res, `${message} error: ${err}.`, err);
 }

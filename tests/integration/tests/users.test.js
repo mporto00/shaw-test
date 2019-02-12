@@ -19,7 +19,6 @@ describe('\nTESTE INTEGRAÇÃO ROTA USER => USER', () => {
         });
     });
   });
-
   describe('\nGET - /api/users/:username/details', () => {
     it('This endpoint must return the details of a GitHub user.', (done) => {
       request(app)
