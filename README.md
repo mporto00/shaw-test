@@ -21,12 +21,11 @@ $ npm run production
 To execute in Linux you need first alter package.json file in:
 > .\shaw-test\package.json
 
-altering the line (6) from:
+altering the line (6) 
 
-*"production": "SET \"NODE_ENV=production\" && nodemon server.js",*
+**from**: *"production": "SET \"NODE_ENV=production\" && nodemon server.js",*
 
-to:
-*"production": "NODE_ENV=production nodemon ./server.js"*
+**to**: *"production": "NODE_ENV=production nodemon ./server.js"*
 
 ## How to run automated test
 
