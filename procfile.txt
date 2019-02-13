@@ -1,1 +1,1 @@
-node run local
+npm run production

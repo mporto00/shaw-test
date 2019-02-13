@@ -1,4 +1,4 @@
 module.exports = {
-  env: 'local',
+  env: 'production',
   github_url: 'https://api.github.com',
 };
